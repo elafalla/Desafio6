@@ -1,0 +1,755 @@
+* {
+  margin: 1px;
+  padding: 0;
+}
+
+/* FUENTE PRINCIPAL */
+html {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* ESTILO DE HEADER */
+
+.tituloPag {
+  color: grey;
+  font-size: 20pt;
+  border-left: 5px solid blue;
+  padding-top: 10px;
+  padding-left: 2px;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  border-bottom: 2px blue solid;
+  position: sticky;
+  top: 0;
+  background: radial-gradient(lightgrey, blue);
+}
+
+.tituloHeader {
+  font-size: 26pt;
+  text-decoration: none;
+  color: black;
+}
+
+.header nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.header nav ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.header nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 10pt;
+  font-weight: bold;
+  justify-content: center;
+  margin-left: 20px;
+  transition: 3s;
+}
+
+.header:hover nav ul li a {
+  font-size: 12pt;
+  text-decoration: underline;
+}
+
+.titulo {
+  padding-top: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.parrafo {
+  padding: 3pt;
+  font-size: 10pt;
+  text-align: justify;
+}
+
+h3 {
+  text-align: left;
+  color: black;
+  font-weight: bold;
+  font-size: medium;
+}
+
+h4 {
+  text-align: left;
+  color: black;
+  font-size: larger;
+}
+
+footer {
+  background-color: lightgray;
+  border-top: 1px solid blue;
+}
+
+footer p {
+  font-size: 9pt;
+  text-align: right;
+  text-align: center;
+}
+
+.footer nav {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 2px;
+  padding-bottom: 3px;
+}
+
+.footer nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 10pt;
+  font-weight: bold;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.logo_wapp {
+  position: fixed;
+  right: 20px;
+  bottom: 260px;
+  opacity: 60%;
+}
+
+.logo_wapp img {
+  width: 60px;
+  height: auto;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/* EXCLUSIVOS DE INDEX.HTML */
+
+.sectores {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.caja {
+  margin: 10px;
+  padding: 10px;
+  height: 170px;
+  width: 150px;
+  border: 1px solid darkblue;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 12px;
+  box-shadow: 3px 3px 10px;
+}
+
+.pSector {
+  padding-top: 10px;
+}
+
+.caja h3 {
+  padding-bottom: 3px;
+  display: flex;
+  justify-content: center;
+}
+
+.img {
+  padding: 5pt;
+  display: flex;
+  justify-content: center;
+}
+
+/* EXCLUSIVOS DE QUIENES SOMOS */
+
+.parrafo1 {
+  grid-area: parrafo1;
+  height: auto;
+  width: auto;
+  text-align: justify;
+}
+
+.parrafo2 {
+  grid-area: parrafo2;
+  height: auto;
+  width: auto;
+  text-align: justify;
+}
+
+.imagen1 {
+  border: 2px blue solid;
+  box-shadow: 2px 2px 8px;
+  grid-area: imagen1;
+  height: fit-content;
+  width: fit-content;
+}
+
+.imagen2 {
+  border: 2px blue solid;
+  box-shadow: 2px 2px 8px;
+  grid-area: imagen2;
+  height: fit-content;
+  width: fit-content;
+}
+
+.gridPadre {
+  display: grid;
+  grid-template-areas:
+    "parrafo1 parrafo1 imagen1"
+    "imagen2 parrafo2 parrafo2";
+  gap: 15px;
+}
+
+/* EXCLUSIVOS DE SERVICIOS.HTML */
+.rubroServ {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.cajaServ {
+  margin: 10px;
+  padding: 10px;
+  height: 150px;
+  width: 150px;
+  border: 1px solid darkblue;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 12px;
+  box-shadow: 3px 3px 10px;
+}
+
+.cajaServ h3 {
+  padding-bottom: 3px;
+  text-align: center;
+}
+
+.gridPadreServ {
+  display: grid;
+  grid-template-areas:
+    "parrafoServ1 parrafoServ1 parrafoServ1 clientes"
+    "imgsrv imgsrv imgsrv clientes"
+    "parrafoServ2 parrafoServ2 parrafoServ2 clientes"
+    "videosrv videosrv videosrv clientes"
+    "parrafoServ3 parrafoServ3 parrafoServ3 parrafoServ3";
+  gap: 10px;
+}
+
+.parrafoServ1 {
+  grid-area: parrafoServ1;
+  padding: 3pt;
+  font-size: 10pt;
+  text-align: justify;
+}
+
+.imgsrv {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 5px;
+  border: 2px blue solid;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px;
+  grid-area: imgsrv;
+  justify-self: center;
+}
+
+.parrafoServ2 {
+  grid-area: parrafoServ2;
+  padding: 3pt;
+  font-size: 10pt;
+  text-align: justify;
+}
+
+.videosrv {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 5px;
+  border: 2px blue solid;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px;
+  grid-area: videosrv;
+  width: fit-content;
+  justify-self: center;
+}
+
+.parrafoServ3 {
+  grid-area: parrafoServ3;
+  padding: 3pt;
+  font-size: 10pt;
+  text-align: justify;
+}
+
+aside {
+  padding-top: 15px;
+  padding-left: 10px;
+  border-left: 2px blue solid;
+  box-shadow: 2px 2px 10px;
+  grid-area: clientes;
+}
+
+aside h3 {
+  text-align: center;
+  padding-bottom: 7px;
+  color: blue;
+}
+
+.clientes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+/* EXCLUSIVOS DE FAQ.HTML */
+
+.faq {
+  padding: 5px;
+}
+
+.faqLista {
+  margin-left: 30px;
+}
+
+.faqPregunta {
+  font-size: 11pt;
+  font-weight: bold;
+}
+
+.faqRespuesta {
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  font-size: 10pt;
+  font-style: oblique;
+  text-align: justify;
+}
+
+.faqContacto {
+  margin: 35px;
+  padding: 5px;
+  border: 2px solid blue;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 11pt;
+}
+
+/* EXCLUSIVO DE CONTACTO */
+.contenedor {
+  background: #24303c;
+  width: 400px;
+  padding: 30px;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 7px 13px 37px #000;
+}
+
+.contenedor h3 {
+  font-size: 22px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: white;
+}
+
+.campo {
+  width: 90%;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  border: 1px solid blue;
+  font-size: 16px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.button {
+  width: 100%;
+  height: 45px;
+  margin-top: 10px;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  background: linear-gradient(to right top, #005aa7, #fffde4);
+  font-size: 20px;
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+  transition: all cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.button:active {
+  transform: translateY(3px);
+}
+
+.campo:focus {
+  height: 40px;
+}
+
+.datos {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  grid-area: direccion;
+  justify-self: center;
+}
+
+.datos h3 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.pContacto {
+  text-align: justify;
+  font-size: 10pt;
+  border: 1px blue double;
+}
+
+#contacto {
+  display: flex;
+  text-align: center;
+  grid-area: formulario;
+  justify-content: center;
+}
+
+.parrafoCont {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gridPadreCont {
+  display: grid;
+  grid-template-areas:
+    "formulario"
+    "direccion";
+}
+
+/* DISEÑO RESPONSIVE - Medidas Query*/
+/* MEDIA QUERI PARA TABLETA */
+@media (min-width: 700px) and (max-width: 1100px) {
+  .sectores {
+    flex-wrap: wrap;
+  }
+
+  .sector h2 {
+    font-size: 14pt;
+  }
+
+  .tituloPag {
+    font-size: 22px;
+  }
+
+  .gridPadre {
+    grid-template-areas:
+      "parrafo1"
+      "imagen1"
+      "parrafo2"
+      "imagen2";
+  }
+
+  .test {
+    display: flex;
+    justify-content: center;
+  }
+
+  .rubroServ {
+    flex-wrap: wrap;
+  }
+
+  .gridPadreServ {
+    grid-template-areas:
+      "parrafoServ1"
+      "imgsrv"
+      "parrafoServ2"
+      "videosrv"
+      "parrafoServ3"
+      "clientes";
+  }
+
+  aside {
+    border-top: 2px blue solid;
+    box-shadow: 2px 2px 10px;
+  }
+
+  .clientes {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gridPadreCont {
+    grid-template-areas:
+      "formulario"
+      "direccion";
+  }
+
+  #contacto {
+    justify-self: center;
+    padding-bottom: 20px;
+  }
+
+  .pContacto {
+    font-size: 10pt;
+  }
+
+  .logo_wapp {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+  }
+
+  .logo_wapp img {
+    width: 40px;
+    height: auto;
+  }
+}
+
+/* MEDIA QUERI PARA CELULAR */
+@media (min-width: 451px) and (max-width: 699px) {
+  .header nav ul li a {
+    font-size: 8pt;
+    margin-left: 10px;
+  }
+
+  .tituloHeader {
+    font-size: 18pt;
+  }
+
+  .sectores {
+    flex-wrap: wrap;
+  }
+
+  .tituloPag {
+    padding-top: 3px;
+    font-size: 16pt;
+  }
+
+  .gridPadre {
+    grid-template-areas:
+      "parrafo1"
+      "imagen1"
+      "parrafo2"
+      "imagen2";
+  }
+
+  .test {
+    display: flex;
+    justify-content: center;
+  }
+
+  .rubroServ {
+    flex-wrap: wrap;
+  }
+
+  .gridPadreServ {
+    grid-template-areas:
+      "parrafoServ1"
+      "imgsrv"
+      "parrafoServ2"
+      "videosrv"
+      "parrafoServ3"
+      "clientes";
+  }
+
+  .clientes {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gridPadreCont {
+    grid-template-areas:
+      "formulario"
+      "direccion";
+  }
+
+  .faqPregunta {
+    font-size: 10pt;
+  }
+
+  .faqRespuesta {
+    font-size: 9pt;
+  }
+
+  .faqContacto {
+    font-size: 10pt;
+  }
+
+  .parrafo {
+    font-size: 9pt;
+  }
+
+  .pContacto {
+    font-size: 10pt;
+  }
+
+  .datos h3 {
+    font-size: 16px;
+  }
+
+  .parrafoCont {
+    font-size: 14px;
+  }
+
+  #contacto {
+    justify-self: center;
+    padding-bottom: 20px;
+    width: 80vw;
+  }
+
+  .ubicacion {
+    width: 85vw;
+  }
+
+  .campo {
+    width: 90%;
+  }
+
+  .logo_wapp {
+    position: fixed;
+    right: 5px;
+    top: 15px;
+  }
+
+  .logo_wapp img {
+    width: 40px;
+    height: auto;
+  }
+}
+
+/* MEDIA QUERI PARA CELULAR MINI */
+@media (max-width: 450px) {
+  .header nav ul {
+    display: none;
+  }
+
+  .sectores {
+    flex-wrap: wrap;
+  }
+
+  .tituloPag {
+    padding-top: 3px;
+    font-size: 16pt;
+  }
+
+  .gridPadre {
+    grid-template-areas:
+      "parrafo1"
+      "imagen1"
+      "parrafo2"
+      "imagen2";
+  }
+
+  .test {
+    display: flex;
+    justify-content: center;
+  }
+
+  .rubroServ {
+    flex-wrap: wrap;
+  }
+
+  .gridPadreServ {
+    grid-template-areas:
+      "parrafoServ1"
+      "imgsrv"
+      "parrafoServ2"
+      "videosrv"
+      "parrafoServ3"
+      "clientes";
+  }
+
+  .clientes {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gridPadreCont {
+    grid-template-areas:
+      "formulario"
+      "direccion";
+  }
+
+  .faqPregunta {
+    font-size: 10pt;
+  }
+
+  .faqRespuesta {
+    font-size: 9pt;
+  }
+
+  .faqContacto {
+    font-size: 10pt;
+  }
+
+  .parrafo {
+    font-size: 9pt;
+  }
+
+  .pContacto {
+    font-size: 10pt;
+  }
+
+  .datos h3 {
+    font-size: 16px;
+  }
+
+  .parrafoCont {
+    font-size: 14px;
+  }
+
+  #contacto {
+    justify-self: center;
+    padding-bottom: 20px;
+    width: 80vw;
+  }
+
+  .contenedor {
+    width: 90%;
+    padding: 4%;
+  }
+
+  .ubicacion {
+    width: 85vw;
+  }
+
+  .campo {
+    width: 90%;
+  }
+
+  .logo_wapp {
+    position: fixed;
+    right: 5px;
+    top: 5px;
+  }
+
+  .logo_wapp img {
+    width: 40px;
+    height: auto;
+  }
+
+  .footer nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 9pt;
+    font-weight: bold;
+    justify-content: center;
+    margin-left: 10px;
+  }
+}
