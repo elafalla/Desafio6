@@ -297,6 +297,8 @@ aside {
   border-left: 2px blue solid;
   box-shadow: 2px 2px 10px;
   grid-area: clientes;
+  z-index: -1;
+  height: 700px;
 }
 
 aside h3 {
