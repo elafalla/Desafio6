@@ -91,34 +91,6 @@ h4 {
   font-size: larger;
 }
 
-footer {
-  background-color: lightgray;
-  border-top: 1px solid blue;
-}
-
-footer p {
-  font-size: 9pt;
-  text-align: center;
-}
-
-.footer nav {
-  display: flex;
-  justify-content: space-around;
-}
-
-.footer nav ul li {
-  display: inline-block;
-  list-style-type: none;
-}
-
-.footer nav ul li a {
-  text-decoration: none;
-  color: black;
-  font-size: 10pt;
-  font-weight: bold;
-  padding: 10px;
-}
-
 .logo_wapp {
   position: fixed;
   right: 20px;
@@ -129,6 +101,14 @@ footer p {
 .logo_wapp img {
   width: 60px;
   height: auto;
+}
+
+.menuBurger {
+  background-color: blue;
+}
+
+.menu {
+  background-color: blue;
 }
 
 /* EXCLUSIVOS DE INDEX.HTML */
@@ -239,11 +219,12 @@ footer p {
 .gridPadreServ {
   display: grid;
   grid-template-areas:
-    "parrafoServ1 parrafoServ1 parrafoServ1 clientes"
-    "imgsrv imgsrv imgsrv clientes"
-    "parrafoServ2 parrafoServ2 parrafoServ2 clientes"
-    "videosrv videosrv videosrv clientes"
-    "parrafoServ3 parrafoServ3 parrafoServ3 parrafoServ3";
+    "parrafoServ1 parrafoServ1 parrafoServ1"
+    "imgsrv imgsrv imgsrv"
+    "parrafoServ2 parrafoServ2 parrafoServ2"
+    "videosrv videosrv videosrv"
+    "parrafoServ3 parrafoServ3 parrafoServ3"
+    "clientes clientes clientes";
   gap: 10px;
 }
 
@@ -293,26 +274,23 @@ footer p {
 
 aside {
   padding-top: 15px;
-  padding-left: 10px;
-  border-left: 2px blue solid;
-  box-shadow: 2px 2px 10px;
+  border-top: 2px blue solid;
   grid-area: clientes;
-  z-index: -1;
-  height: 700px;
+  width: 700px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto
 }
 
 aside h3 {
   text-align: center;
   padding-bottom: 7px;
   color: blue;
+  text-transform: uppercase;
 }
 
-.clientes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  align-items: center;
-}
 /* EXCLUSIVOS DE FAQ.HTML */
 
 .faq {
@@ -484,8 +462,7 @@ aside h3 {
   }
 
   aside {
-    border-top: 2px blue solid;
-    box-shadow: 2px 2px 10px;
+    width: 600px;
   }
 
   .clientes {
@@ -567,9 +544,8 @@ aside h3 {
       "clientes";
   }
 
-  .clientes {
-    justify-content: center;
-    align-items: center;
+  aside {
+    width: 400px;
   }
 
   .gridPadreCont {
@@ -634,9 +610,6 @@ aside h3 {
 
 /* MEDIA QUERI PARA CELULAR MINI */
 @media (max-width: 450px) {
-  .header nav ul {
-    display: none;
-  }
 
   .sectores {
     flex-wrap: wrap;
@@ -674,9 +647,12 @@ aside h3 {
       "clientes";
   }
 
-  .clientes {
-    justify-content: center;
-    align-items: center;
+  aside {
+    display: none;
+  }
+
+  .videosrv {
+    display: none;
   }
 
   .gridPadreCont {
